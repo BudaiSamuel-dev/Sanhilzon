@@ -1,6 +1,7 @@
 <script setup>
   import { ref, onMounted } from 'vue'
   import TheNavbar from './components/TheNavbar.vue'
+  import HeroSection from './components/HeroSection.vue'
 
   // Reaktív változó a sötét módhoz (alapértelmezetten hamis, azaz világos mód)
   const isDarkMode = ref(false)
@@ -37,9 +38,9 @@
     
     <TheNavbar :is-dark="isDarkMode" @toggle-theme="toggleTheme" />
 
-    <main class="py-5 text-center" style="margin-top: 100px;">
-      <h1 class="display-4 font-weight-bold">Sanhilzon Fejlesztő Csapat</h1>
-      <p class="lead">A projekt alapjai sikeresen lefutottak.</p>
+    
+    <main>
+      <HeroSection />
     </main>
 
   </div>
