@@ -101,72 +101,72 @@
 
 <style scoped>
     .transition-nav {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: transparent;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        background-color: transparent;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
     /* Aktív állapot, ha a felhasználó görgetett */
     .scrolled {
-    background-color: var(--nav-bg);
-    backdrop-filter: blur(10px); /* Modern elmosódott háttér effekt */
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(10px); /* Modern elmosódott háttér effekt */
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     /* Osztály a navbar elrejtéséhez lefelé görgetéskor */
     .nav-hidden {
-    transform: translateY(-100%);
+        transform: translateY(-100%);
     }
 
     .logo-img {
-    height: 40px;
-    width: auto;
+        height: 40px;
+        width: auto;
     }
 
     .brand-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: var(--text-main);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: var(--text-main);
     }
 
     .nav-link {
-    color: var(--text-main);
-    font-weight: 500;
-    margin: 0 0.5rem;
-    transition: color var(--transition-speed);
+        color: var(--text-main);
+        font-weight: 500;
+        margin: 0 0.5rem;
+        transition: color var(--transition-speed);
     }
 
     .nav-link:hover {
-    color: var(--sh-yellow);
+        color: var(--sh-yellow);
     }
 
     /* Kör alakú témaváltó gomb */
     .btn-theme-toggle {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    font-size: 1.2rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s, background-color var(--transition-speed);
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s, background-color var(--transition-speed);
     }
 
     .btn-theme-toggle:hover {
-    transform: scale(1.1);
+        transform: scale(1.1);
     }
 
     /* Mobilos reszponzív finomítás a lenyíló menü hátteréhez */
     @media (max-width: 991.98px) {
-    .navbar-collapse {
-        background-color: var(--bg-card);
-        padding: 1rem;
-        border-radius: 8px;
-        margin-top: 1rem;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+        .navbar-collapse {
+            background-color: var(--bg-card);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
     }
 </style>

@@ -28,12 +28,16 @@
 <style scoped>
     /* hover effektus: a kártya finoman felemelkedik és sárgás árnyékot kap */
     .course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.15) !important;
-    border-color: var(--sh-yellow) !important;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(255, 204, 0, 0.15) !important;
+        border-color: var(--sh-yellow) !important;
     }
 
     .fs-7 {
-    font-size: 0.85rem;
+        font-size: 0.85rem;
+    }
+
+    .text-muted {
+        color: var(--text-muted) !important;
     }
 </style>

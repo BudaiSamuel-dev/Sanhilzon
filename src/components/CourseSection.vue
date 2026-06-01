@@ -41,8 +41,8 @@
     <div class="container px-4">
       
       <div class="text-center mb-5">
-        <h2 class="display-5 section-title">Elérhető Kurzusaink</h2>
-        <p class="text-muted mx-auto sub-text" style="max-width: 500px;">
+        <h2 class="display-5" id="section-title">Elérhető Kurzusaink</h2>
+        <p class=" mx-auto sub-text" id="section-description" style="max-width: 500px;">
           Válogass gyakorlatorientált képzéseink közül és sajátítsd el a szakma fortélyait.
         </p>
       </div>
@@ -80,25 +80,28 @@
 
 <style scoped>
     .section-padding {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
-    .section-title {
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
+    #section-title {
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
     }
     /* Kis sárga díszítő vonal a cím alatt */
-    .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: var(--sh-yellow);
-    border-radius: 2px;
+    #section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background-color: var(--sh-yellow);
+        border-radius: 2px;
+    }
+    #section-description {
+        color: var(--text-muted);
     }
 </style>
