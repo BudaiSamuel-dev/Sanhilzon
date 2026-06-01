@@ -2,6 +2,7 @@
   import { ref, onMounted } from 'vue'
   import TheNavbar from './components/TheNavbar.vue'
   import HeroSection from './components/HeroSection.vue'
+  import CourseSection from './components/CourseSection.vue'
 
   // Reaktív változó a sötét módhoz (alapértelmezetten hamis, azaz világos mód)
   const isDarkMode = ref(false)
@@ -41,6 +42,7 @@
     
     <main>
       <HeroSection />
+      <CourseSection />
     </main>
 
   </div>
