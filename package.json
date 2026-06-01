@@ -11,12 +11,14 @@
     "dev:all": "concurrently \"npm run dev\" \"npm run backend\""
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
     "vue": "^3.5.32"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
-    "vite": "^8.0.8",
     "concurrently": "^9.2.1",
+    "vite": "^8.0.8",
     "vite-plugin-vue-devtools": "^8.1.1"
   },
   "engines": {
