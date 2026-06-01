@@ -1,0 +1,80 @@
+/* ==========================================================================
+   SANHILZON GLOBÁLIS STÍLUSFÁJL (global.css)
+   ========================================================================== */
+
+/* 1. Betűtípusok importálása a Google Fonts-ból */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap');
+
+/* 2. Alapértelmezett Világos Mód és CSS Változók */
+:root {
+  /* Fix arculati színek a logó alapján */
+  --sh-yellow: #FFCC00;
+  --sh-dark: #1A1A1B;
+  --sh-grey: #777777;
+  --sh-light-ash: #EEEEEE;
+  
+  /* Dinamikus színek (Alapértelmezetten Világos) */
+  --bg-main: #FFFFFF;
+  --bg-card: #F8F9FA;
+  --text-main: #1A1A1B;
+  --text-muted: #777777;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --border-color: #DEE2E6;
+
+  /* Animációk */
+  --transition-speed: 0.3s;
+}
+
+/* 3. Sötét Mód felülírásai */
+.dark-theme {
+  --bg-main: var(--sh-dark);
+  --bg-card: #2D2D2E;
+  --text-main: #F5F5F5;
+  --text-muted: #A0A0A0;
+  --nav-bg: rgba(26, 26, 27, 0.9);
+  --border-color: #3D3D3F;
+}
+
+/* 4. Globális Alapbeállítások (Szemantika és SEO/UX) */
+html {
+  font-size: 16px; /* Relatív mértékegységek alapja (1rem = 16px) */
+  scroll-behavior: smooth; /* Finom görgetés a menüpontok között */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* 5. Bootstrap Komponensek Testreszabása a DRY elv szerint */
+.card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+}
+
+/* Egyedi Sanhilzon Gomb (Bootstrap alapokon) */
+.btn-sanhilzon {
+  background-color: var(--sh-yellow) !important;
+  color: var(--sh-dark) !important;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-sanhilzon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+  background-color: #e6b800 !important; /* Kicsit sötétebb sárga hoverre */
+}
