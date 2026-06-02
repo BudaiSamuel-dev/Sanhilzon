@@ -1,265 +1,265 @@
 {
-   "courses":[
-      {
-         "id":"1",
-         "title":"Szuperbázis Webfejlesztő: HTML, CSS és JavaScript az alapoktól",
-         "slug":"szuperbazis-webfejleszto-alapok",
-         "category":"Webfejlesztés",
-         "level":"Kezdő",
-         "shortDescription":"Tanuld meg a modern weboldalak készítését a legkeresettebb technológiákkal. Nincs szükség előzetes tudásra!",
-         "price":24900,
-         "discountPrice":18900,
-         "rating":4.8,
-         "reviewCount":124,
-         "instructor":{
-            "id":"inst-01",
-            "name":"Kovács János",
-            "avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Janos"
-         },
-         "duration":"24 óra",
-         "lessonsCount":42,
-         "modules":[
+  "courses": [
+    {
+      "id": "1",
+      "title": "Szuperbázis Webfejlesztő: HTML, CSS és JavaScript az alapoktól",
+      "slug": "szuperbazis-webfejleszto-alapok",
+      "category": "Webfejlesztés",
+      "level": "Kezdő",
+      "shortDescription": "Tanuld meg a modern weboldalak készítését a legkeresettebb technológiákkal. Nincs szükség előzetes tudásra!",
+      "price": 24900,
+      "discountPrice": 18900,
+      "rating": 4.8,
+      "reviewCount": 124,
+      "instructor": {
+        "id": "inst-01",
+        "name": "Kovács János",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Janos"
+      },
+      "duration": "24 óra",
+      "lessonsCount": 42,
+      "modules": [
+        {
+          "id": "m1",
+          "title": "1. Modul: Bevezetés a Web világába és a HTML5",
+          "lessons": [
             {
-               "id":"m1",
-               "title":"1. Modul: Bevezetés a Web világába és a HTML5",
-               "lessons":[
-                  {
-                     "id":"l1",
-                     "title":"Hogyan működik az internet?",
-                     "duration":"12:30"
-                  },
-                  {
-                     "id":"l2",
-                     "title":"Az első HTML oldalunk elkészítése",
-                     "duration":"18:15"
-                  }
-               ]
+              "id": "l1",
+              "title": "Hogyan működik az internet?",
+              "duration": "12:30"
             },
             {
-               "id":"m2",
-               "title":"2. Modul: Stíluslapok (CSS3) és reszponzivitás",
-               "lessons":[
-                  {
-                     "id":"l3",
-                     "title":"A CSS szelektorok és a Box Modell",
-                     "duration":"22:40"
-                  },
-                  {
-                     "id":"l4",
-                     "title":"Flexbox alapok",
-                     "duration":"15:10"
-                  }
-               ]
+              "id": "l2",
+              "title": "Az első HTML oldalunk elkészítése",
+              "duration": "18:15"
             }
-         ]
-      },
-      {
-         "id":"2",
-         "title":"Mastering React & Next.js: Haladó Frontend Fejlesztés",
-         "slug":"mastering-react-nextjs-halado",
-         "category":"Webfejlesztés",
-         "level":"Haladó",
-         "shortDescription":"Építs villámgyors, szerveroldali rendereléssel (SSR) ellátott webalkalmazásokat a legújabb React és Next.js verziókkal.",
-         "price":39900,
-         "discountPrice":null,
-         "rating":4.9,
-         "reviewCount":56,
-         "instructor":{
-            "id":"inst-02",
-            "name":"Szabó Péter",
-            "avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Peter"
-         },
-         "duration":"18 óra",
-         "lessonsCount":35,
-         "modules":[
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "2. Modul: Stíluslapok (CSS3) és reszponzivitás",
+          "lessons": [
             {
-               "id":"m1",
-               "title":"1. Modul: Újratöltve: React Hooks és Állapotkezelés",
-               "lessons":[
-                  {
-                     "id":"l1",
-                     "title":"A useEffect buktatói és optimalizálása",
-                     "duration":"25:10"
-                  },
-                  {
-                     "id":"l2",
-                     "title":"Egyedi (Custom) Hooks készítése",
-                     "duration":"19:45"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "id":"3",
-         "title":"Python Programozás és Adattudomány Alapok",
-         "slug":"python-programozas-adattudomany",
-         "category":"Adattudomány",
-         "level":"Kezdő",
-         "shortDescription":"Ismerkedj meg a Python nyelvvel, majd lépj be az adatelemzés, a Pandas és a vizualizáció világába.",
-         "price":29900,
-         "discountPrice":22900,
-         "rating":4.6,
-         "reviewCount":89,
-         "instructor":{
-            "id":"inst-01",
-            "name":"Kovács János",
-            "avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Janos"
-         },
-         "duration":"30 óra",
-         "lessonsCount":50,
-         "modules":[
+              "id": "l3",
+              "title": "A CSS szelektorok és a Box Modell",
+              "duration": "22:40"
+            },
             {
-               "id":"m1",
-               "title":"1. Modul: Python Alapok",
-               "lessons":[
-                  {
-                     "id":"l1",
-                     "title":"Változók, típusok és operátorok",
-                     "duration":"14:20"
-                  },
-                  {
-                     "id":"l2",
-                     "title":"Ciklusok és feltételes elágazások",
-                     "duration":"21:05"
-                  }
-               ]
+              "id": "l4",
+              "title": "Flexbox alapok",
+              "duration": "15:10"
             }
-         ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Mastering React & Next.js: Haladó Frontend Fejlesztés",
+      "slug": "mastering-react-nextjs-halado",
+      "category": "Webfejlesztés",
+      "level": "Haladó",
+      "shortDescription": "Építs villámgyors, szerveroldali rendereléssel (SSR) ellátott webalkalmazásokat a legújabb React és Next.js verziókkal.",
+      "price": 39900,
+      "discountPrice": null,
+      "rating": 4.9,
+      "reviewCount": 56,
+      "instructor": {
+        "id": "inst-02",
+        "name": "Szabó Péter",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Peter"
       },
-      {
-         "id":"4",
-         "title":"Unity 2D/3D Játékfejlesztés C# alapokon",
-         "slug":"unity-jatekfejlesztes-alapok",
-         "category":"Játékfejlesztés",
-         "level":"Kezdő",
-         "shortDescription":"Készítsd el saját videojátékaidat a világ legnépszerűbb játékmotorjával. A fizikai motortól a kész játék publikálásáig.",
-         "price":34900,
-         "discountPrice":28900,
-         "rating":4.7,
-         "reviewCount":42,
-         "instructor":{
-            "id":"inst-03",
-            "name":"Kiss Márton",
-            "avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Marton"
-         },
-         "duration":"28 óra",
-         "lessonsCount":45,
-         "modules":[
+      "duration": "18 óra",
+      "lessonsCount": 35,
+      "modules": [
+        {
+          "id": "m1",
+          "title": "1. Modul: Újratöltve: React Hooks és Állapotkezelés",
+          "lessons": [
             {
-               "id":"m1",
-               "title":"1. Modul: Ismerkedés a Unity felületével és a C# szkriptekkel",
-               "lessons":[
-                  {
-                     "id":"l1",
-                     "title":"A Unity Editor felépítése és navigáció",
-                     "duration":"15:40"
-                  },
-                  {
-                     "id":"l2",
-                     "title":"Karaktermozgatás programozása C# nyelven",
-                     "duration":"24:15"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "id":"5",
-         "title":"Asztali Alkalmazások Fejlesztése: C# és WPF mesterfogások",
-         "slug":"asztali-alkalmazasok-csharp-wpf",
-         "category":"Asztali alkalmazások",
-         "level":"Középhaladó",
-         "shortDescription":"Tanuld meg a vállalati környezetben használt Windows-os asztali szoftverek fejlesztését MVVM mintával.",
-         "price":37900,
-         "discountPrice":null,
-         "rating":4.5,
-         "reviewCount":29,
-         "instructor":{
-            "id":"inst-02",
-            "name":"Szabó Péter",
-            "avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Peter"
-         },
-         "duration":"22 óra",
-         "lessonsCount":38,
-         "modules":[
+              "id": "l1",
+              "title": "A useEffect buktatói és optimalizálása",
+              "duration": "25:10"
+            },
             {
-               "id":"m1",
-               "title":"1. Modul: Grafikus felületek tervezése JavaFX segítségével",
-               "lessons":[
-                  {
-                     "id":"l1",
-                     "title":"Bevezetés a JavaFX világába",
-                     "duration":"18:50"
-                  }
-               ]
+              "id": "l2",
+              "title": "Egyedi (Custom) Hooks készítése",
+              "duration": "19:45"
             }
-         ]
-      }
-   ],
-   "categories":[
-      {
-         "id":"cat-1",
-         "name":"Webfejlesztés",
-         "slug":"webfejlesztes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Python Programozás és Adattudomány Alapok",
+      "slug": "python-programozas-adattudomany",
+      "category": "Adattudomány",
+      "level": "Kezdő",
+      "shortDescription": "Ismerkedj meg a Python nyelvvel, majd lépj be az adatelemzés, a Pandas és a vizualizáció világába.",
+      "price": 29900,
+      "discountPrice": 22900,
+      "rating": 4.6,
+      "reviewCount": 89,
+      "instructor": {
+        "id": "inst-01",
+        "name": "Kovács János",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Janos"
       },
-      {
-         "id":"cat-2",
-         "name":"Adattudomány",
-         "slug":"adattudomany"
+      "duration": "30 óra",
+      "lessonsCount": 50,
+      "modules": [
+        {
+          "id": "m1",
+          "title": "1. Modul: Python Alapok",
+          "lessons": [
+            {
+              "id": "l1",
+              "title": "Változók, típusok és operátorok",
+              "duration": "14:20"
+            },
+            {
+              "id": "l2",
+              "title": "Ciklusok és feltételes elágazások",
+              "duration": "21:05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Unity 2D/3D Játékfejlesztés C# alapokon",
+      "slug": "unity-jatekfejlesztes-alapok",
+      "category": "Játékfejlesztés",
+      "level": "Kezdő",
+      "shortDescription": "Készítsd el saját videojátékaidat a világ legnépszerűbb játékmotorjával. A fizikai motortól a kész játék publikálásáig.",
+      "price": 34900,
+      "discountPrice": 28900,
+      "rating": 4.7,
+      "reviewCount": 42,
+      "instructor": {
+        "id": "inst-03",
+        "name": "Kiss Márton",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Marton"
       },
-      {
-         "id":"cat-3",
-         "name":"Mobilfejlesztés",
-         "slug":"mobilfejlesztes"
+      "duration": "28 óra",
+      "lessonsCount": 45,
+      "modules": [
+        {
+          "id": "m1",
+          "title": "1. Modul: Ismerkedés a Unity felületével és a C# szkriptekkel",
+          "lessons": [
+            {
+              "id": "l1",
+              "title": "A Unity Editor felépítése és navigáció",
+              "duration": "15:40"
+            },
+            {
+              "id": "l2",
+              "title": "Karaktermozgatás programozása C# nyelven",
+              "duration": "24:15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Asztali Alkalmazások Fejlesztése: C# és WPF mesterfogások",
+      "slug": "asztali-alkalmazasok-csharp-wpf",
+      "category": "Asztali alkalmazások",
+      "level": "Középhaladó",
+      "shortDescription": "Tanuld meg a vállalati környezetben használt Windows-os asztali szoftverek fejlesztését MVVM mintával.",
+      "price": 37900,
+      "discountPrice": null,
+      "rating": 4.5,
+      "reviewCount": 29,
+      "instructor": {
+        "id": "inst-02",
+        "name": "Szabó Péter",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Peter"
       },
-      {
-         "id":"cat-4",
-         "name":"Játékfejlesztés",
-         "slug":"jatekfejlesztes"
-      },
-      {
-         "id":"cat-5",
-         "name":"Asztali alkalmazások",
-         "slug":"asztali-alkalmazasok"
-      }
-   ],
-   "enrollments":[
-      {
-         "id":"enr-001",
-         "courseId":"1",
-         "studentName":"Nagy Ádám",
-         "email":"adam.nagy@email.com",
-         "phone":"+36301234567",
-         "enrolledAt":"2026-05-21T10:15:30Z"
-      }
-   ],
-   "applications":[
-      {
-         "id":"app-001",
-         "fullName":"Tóth Gábor",
-         "email":"gabor.toth@email.com",
-         "phone":"+36209876543",
-         "role":"Oktató",
-         "targetCategory":"Mobilfejlesztés",
-         "experienceYears":5,
-         "linkedinProfile":"https://linkedin.com/in/tothgabor-example",
-         "introduction":"Sziasztok! Android és iOS fejlesztőként dolgozom, és szeretnék egy átfogó Flutter kurzust indítani nálatok.",
-         "status":"Feldolgozás alatt",
-         "appliedAt":"2026-05-21T11:30:00Z"
-      },
-      {
-         "id":"app-002",
-         "fullName":"Németh Andrea",
-         "email":"andrea.nemeth@email.com",
-         "phone":"+36705554433",
-         "role":"Mentor",
-         "targetCategory":"Webfejlesztés",
-         "experienceYears":2,
-         "linkedinProfile":null,
-         "introduction":"Junior frontendesként szívesen segíteném a kezdő diákok munkáját és elakadásaat a HTML/CSS moduloknál.",
-         "status":"Elfogadva",
-         "appliedAt":"2026-05-20T14:15:22Z"
-      }
-   ]
+      "duration": "22 óra",
+      "lessonsCount": 38,
+      "modules": [
+        {
+          "id": "m1",
+          "title": "1. Modul: Grafikus felületek tervezése JavaFX segítségével",
+          "lessons": [
+            {
+              "id": "l1",
+              "title": "Bevezetés a JavaFX világába",
+              "duration": "18:50"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Webfejlesztés",
+      "slug": "webfejlesztes"
+    },
+    {
+      "id": "cat-2",
+      "name": "Adattudomány",
+      "slug": "adattudomany"
+    },
+    {
+      "id": "cat-3",
+      "name": "Mobilfejlesztés",
+      "slug": "mobilfejlesztes"
+    },
+    {
+      "id": "cat-4",
+      "name": "Játékfejlesztés",
+      "slug": "jatekfejlesztes"
+    },
+    {
+      "id": "cat-5",
+      "name": "Asztali alkalmazások",
+      "slug": "asztali-alkalmazasok"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "enr-001",
+      "courseId": "1",
+      "studentName": "Nagy Ádám",
+      "email": "adam.nagy@email.com",
+      "phone": "+36301234567",
+      "enrolledAt": "2026-05-21T10:15:30Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app-001",
+      "fullName": "Tóth Gábor",
+      "email": "gabor.toth@email.com",
+      "phone": "+36209876543",
+      "role": "Oktató",
+      "targetCategory": "Mobilfejlesztés",
+      "experienceYears": 5,
+      "linkedinProfile": "https://linkedin.com/in/tothgabor-example",
+      "introduction": "Sziasztok! Android és iOS fejlesztőként dolgozom, és szeretnék egy átfogó Flutter kurzust indítani nálatok.",
+      "status": "Feldolgozás alatt",
+      "appliedAt": "2026-05-21T11:30:00Z"
+    },
+    {
+      "id": "app-002",
+      "fullName": "Németh Andrea",
+      "email": "andrea.nemeth@email.com",
+      "phone": "+36705554433",
+      "role": "Mentor",
+      "targetCategory": "Webfejlesztés",
+      "experienceYears": 2,
+      "linkedinProfile": null,
+      "introduction": "Junior frontendesként szívesen segíteném a kezdő diákok munkáját és elakadásaat a HTML/CSS moduloknál.",
+      "status": "Elfogadva",
+      "appliedAt": "2026-05-20T14:15:22Z"
+    }
+  ]
 }

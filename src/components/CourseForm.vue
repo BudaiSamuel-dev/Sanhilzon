@@ -66,9 +66,9 @@
       <label for="courseSelect" class="form-label fw-bold">Válaszd ki a kurzust *</label>
       <select v-model="formData.courseId" class="form-select" id="courseSelect">
         <option value="" disabled>Válassz kurzust...</option>
+        
         <option v-for="course in courses" :key="course.id" :value="course.id">
-          {{ course.title }}
-        </option>
+          {{ course.title }} </option>
       </select>
     </div>
 

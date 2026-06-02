@@ -16,7 +16,7 @@ const teacherFormRef = ref(null)
 const loadFormData = () => {
   // Kurzusok lekérése
   const xhrCourses = new XMLHttpRequest()
-  xhrCourses.open('GET', 'http://localhost:3000/courses', true)
+  xhrCourses.open('GET', 'http://localhost:3001/courses', true)
   xhrCourses.onreadystatechange = function () {
     if (xhrCourses.readyState === 4 && xhrCourses.status === 200) {
       courses.value = JSON.parse(xhrCourses.responseText)
@@ -26,7 +26,7 @@ const loadFormData = () => {
 
   // Kategóriák lekérése a tanári formhoz
   const xhrCategories = new XMLHttpRequest()
-  xhrCategories.open('GET', 'http://localhost:3000/categories', true)
+  xhrCategories.open('GET', 'http://localhost:3001/categories', true)
   xhrCategories.onreadystatechange = function () {
     if (xhrCategories.readyState === 4 && xhrCategories.status === 200) {
       categories.value = JSON.parse(xhrCategories.responseText)
@@ -44,7 +44,7 @@ const handleEnrollmentSubmit = (studentData) => {
   }
 
   const xhr = new XMLHttpRequest()
-  xhr.open('POST', 'http://localhost:3000/enrollments', true)
+  xhr.open('POST', 'http://localhost:3001/enrollments', true)
   // Kötelező fejléc beállítás JSON küldéséhez!
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
 
@@ -82,7 +82,7 @@ const handleApplicationSubmit = (teacherData) => {
   }
 
   const xhr = new XMLHttpRequest()
-  xhr.open('POST', 'http://localhost:3000/applications', true)
+  xhr.open('POST', 'http://localhost:3001/applications', true)
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
 
   xhr.onreadystatechange = function () {
