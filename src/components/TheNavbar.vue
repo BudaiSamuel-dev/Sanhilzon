@@ -130,18 +130,26 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 800;
         letter-spacing: 1px;
-        color: var(--text-main);
+        color: #ffff;
     }
 
-    .nav-link {
-        color: var(--text-main);
+    .scrolled .brand-text {
+        color: var(--nav-text) !important;
+    }
+
+    .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.9);
         font-weight: 500;
         margin: 0 0.5rem;
         transition: color var(--transition-speed);
     }
 
+    .scrolled .navbar-nav .nav-link {
+        color: var(--nav-text) !important;
+    }
+
     .nav-link:hover {
-        color: var(--sh-yellow);
+        color: var(--sh-yellow) !important;
     }
 
     /* Kör alakú témaváltó gomb */

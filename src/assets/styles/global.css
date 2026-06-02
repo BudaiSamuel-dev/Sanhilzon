@@ -21,6 +21,8 @@
   --nav-bg: rgba(255, 255, 255, 0.9);
   --border-color: #DEE2E6;
 
+  --nav-text: #1A1A1B;
+
   /* Animációk */
   --transition-speed: 0.3s;
 }
@@ -32,6 +34,7 @@
   --text-main: #F5F5F5;
   --text-muted: #A0A0A0;
   --nav-bg: rgba(26, 26, 27, 0.9);
+  --nav-text: #F5F5F5;
   --border-color: #3D3D3F;
 }
 
@@ -77,4 +80,17 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
   background-color: #e6b800 !important; /* Kicsit sötétebb sárga hoverre */
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Amikor a navbar már le van görgetve és világos témában vagyunk, a hamburger legyen sötét */
+body:not(.dark-theme) .scrolled .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(26, 26, 27, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.custom-toggler {
+  border-color: var(--nav-text) !important;
 }
