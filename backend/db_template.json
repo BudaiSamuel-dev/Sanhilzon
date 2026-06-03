@@ -226,30 +226,41 @@
   ],
   "enrollments": [
     {
-      "id": "enr-001",
+      "customId": "enr-001",
+      "courseId": "4",
+      "studentName": "Teszt Tomi",
+      "email": "teszt.tomi@email.com",
+      "phone": "+363012345678",
+      "enrolledAt": "2026-06-03T07:00:55.533Z",
+      "id": "dGbzUn_bhFY"
+    },
+    {
+      "customId": "enr-002",
       "courseId": "1",
       "studentName": "Nagy Ádám",
       "email": "adam.nagy@email.com",
-      "phone": "+36301234567",
-      "enrolledAt": "2026-05-21T10:15:30Z"
+      "phone": "+36311234567",
+      "enrolledAt": "2026-06-03T07:02:17.125Z",
+      "id": "nC81m4gHeSs"
     }
   ],
   "applications": [
     {
-      "id": "app-001",
-      "fullName": "Tóth Gábor",
-      "email": "gabor.toth@email.com",
-      "phone": "+36209876543",
+      "customId": "app-001",
+      "fullName": "Példa Péter",
+      "email": "pelda.peti@email.com",
+      "phone": "+36309876543",
       "role": "Oktató",
-      "targetCategory": "Mobilfejlesztés",
+      "targetCategory": "Játékfejlesztés",
       "experienceYears": 5,
-      "linkedinProfile": "https://linkedin.com/in/tothgabor-example",
-      "introduction": "Sziasztok! Android és iOS fejlesztőként dolgozom, és szeretnék egy átfogó Flutter kurzust indítani nálatok.",
+      "linkedinProfile": null,
+      "introduction": "Játékfejlesztő... Ennyi :)",
       "status": "Feldolgozás alatt",
-      "appliedAt": "2026-05-21T11:30:00Z"
+      "appliedAt": "2026-06-03T07:04:05.508Z",
+      "id": "h6VaW0GA54s"
     },
     {
-      "id": "app-002",
+      "customId": "app-002",
       "fullName": "Németh Andrea",
       "email": "andrea.nemeth@email.com",
       "phone": "+36705554433",
@@ -258,8 +269,9 @@
       "experienceYears": 2,
       "linkedinProfile": null,
       "introduction": "Junior frontendesként szívesen segíteném a kezdő diákok munkáját és elakadásaat a HTML/CSS moduloknál.",
-      "status": "Elfogadva",
-      "appliedAt": "2026-05-20T14:15:22Z"
+      "status": "Feldolgozás alatt",
+      "appliedAt": "2026-06-03T07:05:49.158Z",
+      "id": "DUZcednKoH4"
     }
   ]
 }

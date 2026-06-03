@@ -34,80 +34,117 @@ const loadFormData = () => {
   }
   xhrCategories.send()
 }
-
-// 4. DIÁK JELENTKEZÉS BEKÜLDÉSE (XHR POST -> /enrollments)
+// DIÁK JELENTKEZÉS BEKÜLDÉSE (XHR POST -> /enrollments)
 const handleEnrollmentSubmit = (studentData) => {
-  // Kiegészítjük az adatot az adatbázis által elvárt időponttal
-  const payload = {
-    ...studentData,
-    enrolledAt: new Date().toISOString()
-  }
-
-  const xhr = new XMLHttpRequest()
-  xhr.open('POST', 'http://localhost:3001/enrollments', true)
-  // Kötelező fejléc beállítás JSON küldéséhez!
-  xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 201) { // A 201 jelenti a sikeres objektum-létrehozást
-        Swal.fire({
-          icon: 'success',
-          title: 'Sikeres jelentkezés!',
-          text: 'Hamarosan keresni fogunk a megadott elérhetőségeken.',
-          confirmButtonColor: '#FFCC00'
-        })
-        // Sikeres küldés után meghívjuk az alkomponens ürítő függvényét
-        if (studentFormRef.value) studentFormRef.value.resetForm()
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Hiba történt!',
-          text: 'Nem sikerült elküldeni a jelentkezést. Kérjük, próbáld újra később.',
-          confirmButtonColor: '#FFCC00'
-        })
+  const xhrGet = new XMLHttpRequest()
+  xhrGet.open('GET', 'http://localhost:3001/enrollments', true)
+  
+  xhrGet.onreadystatechange = function () {
+    if (xhrGet.readyState === 4 && xhrGet.status === 200) {
+      const currentEnrollments = JSON.parse(xhrGet.responseText)
+      
+      let nextIdNumber = 1
+      if (currentEnrollments.length > 0) {
+        // Most már a mi egyedi 'customId' mezőnkből olvassuk ki a számokat!
+        const validIds = currentEnrollments
+          .filter(e => typeof e.customId === 'string' && e.customId.startsWith('enr-'))
+          .map(e => parseInt(e.customId.replace('enr-', ''), 10))
+        
+        if (validIds.length > 0) {
+          nextIdNumber = Math.max(...validIds) + 1
+        }
       }
+      
+      const newCustomId = 'enr-' + String(nextIdNumber).padStart(3, '0')
+
+      // Összerakjuk a payload-ot: az 'id'-t KIHAGYJUK, hogy a json-server azt tegyen vele amit akar,
+      // mi viszont beküldjük a saját, tiszta 'customId' mezőnket!
+      const payload = {
+        customId: newCustomId,
+        courseId: studentData.courseId,
+        studentName: studentData.studentName,
+        email: studentData.email,
+        phone: studentData.phone,
+        enrolledAt: new Date().toISOString()
+      }
+
+      const xhrPost = new XMLHttpRequest()
+      xhrPost.open('POST', 'http://localhost:3001/enrollments', true)
+      xhrPost.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+      
+      xhrPost.onreadystatechange = function () {
+        if (xhrPost.readyState === 4 && xhrPost.status === 201) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Sikeres jelentkezés!',
+            text: `A regisztrációd rögzítve lett ${newCustomId} egyedi azonosítóval.`,
+            confirmButtonColor: '#FFCC00'
+          })
+          if (studentFormRef.value) studentFormRef.value.resetForm()
+        }
+      }
+      xhrPost.send(JSON.stringify(payload))
     }
   }
-  xhr.send(JSON.stringify(payload))
+  xhrGet.send()
 }
 
-// 5. TANÁR JELENTKEZÉS BEKÜLDÉSE (XHR POST -> /applications)
+// TANÁR JELENTKEZÉS BEKÜLDÉSE (XHR POST -> /applications)
 const handleApplicationSubmit = (teacherData) => {
-  // Kiegészítjük a tanári adatokat a kötelező alapértelmezett mezőkkel
-  const payload = {
-    ...teacherData,
-    status: 'Feldolgozás alatt',
-    appliedAt: new Date().toISOString()
-  }
-
-  const xhr = new XMLHttpRequest()
-  xhr.open('POST', 'http://localhost:3001/applications', true)
-  xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 201) {
-        Swal.fire({
-          icon: 'success',
-          title: 'Sikeres mentori regisztráció!',
-          text: 'A Sanhilzon vezetősége áttekinti a profilodat, és felveszi veled a kapcsolatot.',
-          confirmButtonColor: '#FFCC00'
-        })
-        if (teacherFormRef.value) teacherFormRef.value.resetForm()
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Küldési hiba!',
-          text: 'A szerver elutasította a kérelmet.',
-          confirmButtonColor: '#FFCC00'
-        })
+  const xhrGet = new XMLHttpRequest()
+  xhrGet.open('GET', 'http://localhost:3001/applications', true)
+  
+  xhrGet.onreadystatechange = function () {
+    if (xhrGet.readyState === 4 && xhrGet.status === 200) {
+      const currentApplications = JSON.parse(xhrGet.responseText)
+      
+      let nextIdNumber = 1
+      if (currentApplications.length > 0) {
+        const validIds = currentApplications
+          .filter(a => typeof a.customId === 'string' && a.customId.startsWith('app-'))
+          .map(a => parseInt(a.customId.replace('app-', ''), 10))
+          
+        if (validIds.length > 0) {
+          nextIdNumber = Math.max(...validIds) + 1
+        }
       }
+      
+      const newCustomId = 'app-' + String(nextIdNumber).padStart(3, '0')
+
+      const payload = {
+        customId: newCustomId,
+        fullName: teacherData.fullName,
+        email: teacherData.email,
+        phone: teacherData.phone,
+        role: teacherData.role,
+        targetCategory: teacherData.targetCategory,
+        experienceYears: teacherData.experienceYears,
+        linkedinProfile: teacherData.linkedinProfile || null,
+        introduction: teacherData.introduction,
+        status: 'Feldolgozás alatt',
+        appliedAt: new Date().toISOString()
+      }
+
+      const xhrPost = new XMLHttpRequest()
+      xhrPost.open('POST', 'http://localhost:3001/applications', true)
+      xhrPost.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+      
+      xhrPost.onreadystatechange = function () {
+        if (xhrPost.readyState === 4 && xhrPost.status === 201) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Sikeres mentori regisztráció!',
+            text: `Jelentkezésed elmentve ${newCustomId} egyedi azonosítóval.`,
+            confirmButtonColor: '#FFCC00'
+          })
+          if (teacherFormRef.value) teacherFormRef.value.resetForm()
+        }
+      }
+      xhrPost.send(JSON.stringify(payload))
     }
   }
-  xhr.send(JSON.stringify(payload))
+  xhrGet.send()
 }
-
 onMounted(() => {
   loadFormData()
 })
