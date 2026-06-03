@@ -4,6 +4,7 @@
   import HeroSection from './components/HeroSection.vue'
   import CourseSection from './components/CourseSection.vue'
   import JoinSection from './components/JoinSection.vue'
+  import TheFooter from './components/TheFooter.vue'
 
   // Reaktív változó a sötét módhoz (alapértelmezetten hamis, azaz világos mód)
   const isDarkMode = ref(false)
@@ -47,6 +48,7 @@
       <JoinSection />
     </main>
 
+    <TheFooter />
   </div>
 </template>
 
