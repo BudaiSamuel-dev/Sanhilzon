@@ -31,8 +31,8 @@ const currentYear = ref(new Date().getFullYear())
 
         <div class="col-12 col-md-4">
           <h5 class="fw-bold mb-3 text-uppercase fs-6 tracking-wider">Kapcsolat</h5>
-          <ul class="list-unstyled text-muted small">
-            <li class="mb-2">📍 Budapest, Magyarország</li>
+          <ul class="list-unstyled small">
+            <li class="mb-2">📍 Sand, Magyarország</li>
             <li class="mb-2">✉️ info@sanhilzon.hu</li>
             <li class="mb-2">📞 +36 1 234 5678</li>
           </ul>
@@ -42,7 +42,7 @@ const currentYear = ref(new Date().getFullYear())
 
       <div class="row mt-5 pt-3 border-top border-secondary-subtle text-center">
         <div class="col-12">
-          <p class="text-muted small mb-0">
+          <p class="small mb-0">
             © {{ currentYear }} Sanhilzon. Minden jog fenntartva. | Iskolaprojekt
           </p>
         </div>
@@ -89,6 +89,15 @@ const currentYear = ref(new Date().getFullYear())
     }
 
     footer p {
-    color: var(--text-muted);
+      color: var(--text-muted);
+    }
+
+    footer ul li {
+      color: var(--text-muted);
+    }
+
+    footer ul li:hover {
+      color: var(--sh-yellow);
+      transition: color var(--transition-speed) ease;
     }
 </style>
