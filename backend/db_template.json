@@ -242,6 +242,15 @@
       "phone": "+36311234567",
       "enrolledAt": "2026-06-03T07:02:17.125Z",
       "id": "nC81m4gHeSs"
+    },
+    {
+      "customId": "enr-003",
+      "courseId": "4",
+      "studentName": "Teszt Tomi",
+      "email": "teszt.tomi@email.com",
+      "phone": "+363012345678",
+      "enrolledAt": "2026-06-04T04:54:23.724Z",
+      "id": "Xry94p7qBSg"
     }
   ],
   "applications": [
@@ -272,6 +281,21 @@
       "status": "Feldolgozás alatt",
       "appliedAt": "2026-06-03T07:05:49.158Z",
       "id": "DUZcednKoH4"
+    },
+    {
+      "customId": "app-003",
+      "fullName": "Példa Péter",
+      "email": "pelda.peti@email.com",
+      "phone": "+36705554433",
+      "role": "Mentor",
+      "targetCategory": "Adattudomány",
+      "experienceYears": 6,
+      "linkedinProfile": null,
+      "introduction": "Bemutakozás...",
+      "status": "Feldolgozás alatt",
+      "appliedAt": "2026-06-04T04:57:11.404Z",
+      "id": "XViPfQvh2pM"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -78,7 +78,9 @@ const handleEnrollmentSubmit = (studentData) => {
             icon: 'success',
             title: 'Sikeres jelentkezés!',
             text: `A regisztrációd rögzítve lett ${newCustomId} egyedi azonosítóval.`,
-            confirmButtonColor: '#FFCC00'
+            confirmButtonColor: '#FFCC00',
+            background: 'var(--bg-main)',
+            color: 'var(--text-main)'
           })
           if (studentFormRef.value) studentFormRef.value.resetForm()
         }
@@ -135,7 +137,9 @@ const handleApplicationSubmit = (teacherData) => {
             icon: 'success',
             title: 'Sikeres mentori regisztráció!',
             text: `Jelentkezésed elmentve ${newCustomId} egyedi azonosítóval.`,
-            confirmButtonColor: '#FFCC00'
+            confirmButtonColor: '#FFCC00',
+            background: 'var(--bg-main)',
+            color: 'var(--text-main)'
           })
           if (teacherFormRef.value) teacherFormRef.value.resetForm()
         }
