@@ -3,7 +3,7 @@
 <template>
     <section id="hero" class="hero-container d-flex align-items-center justify-content-center text-center">
     
-    <video autoplay muted loop playsinline class="hero-video">
+    <video autoplay muted loop playsinline aria-hidden="true" class="hero-video">
       <source src="../assets/videos/hero-bg.mp4" type="video/mp4" />
       A böngésződ nem támogatja a videó lejátszását.
     </video>
