@@ -2,12 +2,11 @@
     import { ref, onMounted } from 'vue'
     import CourseCard from './CourseCard.vue'
 
-    // Reaktív változók az AJAX állapotok követéséhez
     const courses = ref([])
     const isLoading = ref(true)
     const errorMessage = ref('')
 
-    // Az AJAX GET kérés függvénye tisztán XMLHttpRequest-tel
+    
     const loadCourses = () => {
         const xhr = new XMLHttpRequest()
     
@@ -30,7 +29,6 @@
         xhr.send()
     }
 
-        // Amint a komponens a helyére kerül, azonnal lőjük az AJAX kérést
     onMounted(() => {
         loadCourses()
     })
@@ -89,7 +87,7 @@
         display: inline-block;
         padding-bottom: 10px;
     }
-    /* Kis sárga díszítő vonal a cím alatt */
+    
     #section-title::after {
         content: '';
         position: absolute;

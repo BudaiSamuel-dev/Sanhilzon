@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// Reaktív változó az aktuális évszám dinamikus megjelenítéséhez
 const currentYear = ref(new Date().getFullYear())
 </script>
 
@@ -53,7 +52,7 @@ const currentYear = ref(new Date().getFullYear())
 
 <style scoped>
     .footer-container {
-    /* A global.css-ben definiált kártya-hátteret használjuk elválasztásként */
+    
     background-color: var(--bg-card); 
     border-top: 1px solid var(--border-color);
     transition: background-color var(--transition-speed), border-color var(--transition-speed);
@@ -76,7 +75,6 @@ const currentYear = ref(new Date().getFullYear())
     color: var(--text-main);
     }
 
-    /* Gyorslinkek stílusai és hover effektusa */
     .footer-links a {
     color: var(--text-muted);
     text-decoration: none;

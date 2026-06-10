@@ -6,18 +6,14 @@
   import JoinSection from './components/JoinSection.vue'
   import TheFooter from './components/TheFooter.vue'
 
-  // Reaktív változó a sötét módhoz (alapértelmezetten hamis, azaz világos mód)
   const isDarkMode = ref(false)
 
-  // Függvény a téma kapcsolásához
   const toggleTheme = () => {
     isDarkMode.value = !isDarkMode.value
-    // Elmentjük a választást a böngészőben, hogy frissítés után se vesszen el
     localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light')
     updateBodyClass()
   }
 
-  // Mivel a body elem a Vue hatáskörén kívül van, közvetlenül adjuk hozzá a CSS osztályt
   const updateBodyClass = () => {
     if (isDarkMode.value) {
       document.body.classList.add('dark-theme')
@@ -26,7 +22,6 @@
     }
   }
 
-  // Amikor a főkomponens betöltődik, megnézzük, mit választott legutóbb a felhasználó
   onMounted(() => {
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme === 'dark') {

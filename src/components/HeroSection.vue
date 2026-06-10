@@ -29,38 +29,38 @@
     .hero-container {
         position: relative;
         width: 100%;
-        height: 100vh; /* Teljes képernyőmagasság */
+        height: 100vh; 
         overflow: hidden;
-        background-color: var(--sh-dark); /* Tartalék háttérszín, amíg a videó töltődik */
+        background-color: var(--sh-dark); 
     }
 
-    /* 1. Réteg: A Videó elhelyezése */
+    
     .hero-video {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Kitölti a teret torzulás nélkül */
+        object-fit: cover; 
         z-index: 1;
     }
 
-    /* 2. Réteg: A Sötétítő Overlay */
+    
     .hero-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(18, 18, 18, 0.65); /* 65%-os sötétítés az olvashatóságért */
+        background: rgba(18, 18, 18, 0.65); 
         z-index: 2;
     }
 
     /* 3. Réteg: A Tartalom */
     .hero-content {
         position: relative;
-        z-index: 3; /* A videó és az overlay felett helyezkedik el */
-        color: #FFFFFF; /* A fejléc szövege mindig fehér marad, függetlenül a sötét módtól */
+        z-index: 3; 
+        color: #FFFFFF; 
     }
 
     .main-title {
@@ -68,7 +68,6 @@
         letter-spacing: -1px;
     }
 
-    /* Egy kis extra modern dizájn: színátmenetes kiemelés a szövegben */
     .text-gradient {
         color: var(--sh-yellow);
     }
@@ -79,10 +78,10 @@
         color: rgba(255, 255, 255, 0.85);
     }
 
-    /* Reszponzív finomítások kisebb kijelzőkre (Mobilra) */
+    
     @media (max-width: 767.98px) {
         .main-title {
-            font-size: 2.5rem; /* Kisebb betűméret mobilon, hogy ne törjön csúnyán */
+            font-size: 2.5rem; 
         }
         .sub-title {
             font-size: 1rem;

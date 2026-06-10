@@ -1,5 +1,5 @@
 <script setup>
-    // A kártya készen kapja egy kurzus adatait a szülőtől props-ként
+    
     defineProps({
     title: String,
     description: String,
@@ -26,7 +26,7 @@
 </template>
 
 <style scoped>
-    /* hover effektus: a kártya finoman felemelkedik és sárgás árnyékot kap */
+   
     .course-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 25px rgba(255, 204, 0, 0.15) !important;

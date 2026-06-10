@@ -1,49 +1,39 @@
 <script setup>
     import { ref, onMounted, onUnmounted } from 'vue'
 
-    // 1. Definiáljuk a szülőtől kapott adatokat (Props)
-    defineProps({
+     defineProps({
         isDark: Boolean
     })
 
-    // 2. Definiáljuk az eseményeket, amiket vissza tudunk küldeni a szülőnek (Emits)
     defineEmits(['toggle-theme'])
-
-    // 3. Reaktív állapotok a navigáció viselkedéséhez
     const isScrolled = ref(false)
     const isNavHidden = ref(false)
     const isMobileMenuOpen = ref(false)
     let lastScrollPosition = 0
 
-    // Mobil menü nyitás/zárás
-    const toggleMobileMenu = () => {
+     const toggleMobileMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value
     }
 
     const closeMobileMenu = () => {
     isMobileMenuOpen.value = false
     }
-
-    // Smart Navbar görgetési logika
     const handleScroll = () => {
-    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-    
-    if (currentScrollPosition < 0) return
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+      
+      if (currentScrollPosition < 0) return
 
-    // Ha 50px-nél lejjebb görgetünk, a navbar kap egy hátteret
-    isScrolled.value = currentScrollPosition > 50
+      isScrolled.value = currentScrollPosition > 50
 
-    // Elrejtés lefelé görgetéskor (ha már lejjebb vagyunk 150px-nél), megjelenítés felfelé görgetéskor
-    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 150) {
-        isNavHidden.value = true
-    } else {
-        isNavHidden.value = false
-    }
-    
-    lastScrollPosition = currentScrollPosition
+      if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 150) {
+          isNavHidden.value = true
+      } else {
+          isNavHidden.value = false
+      }
+      
+      lastScrollPosition = currentScrollPosition
     }
 
-    // Eseménykezelők hozzáadása és eltávolítása az életciklusban
     onMounted(() => {
     window.addEventListener('scroll', handleScroll)
     })
@@ -106,9 +96,7 @@
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
     }
-
-    /* Aktív állapot, ha a felhasználó görgetett */
-    .scrolled {
+   .scrolled {
         background-color: var(--nav-bg);
         backdrop-filter: blur(10px); /* Modern elmosódott háttér effekt */
         padding-top: 0.8rem;
@@ -116,8 +104,7 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
-    /* Osztály a navbar elrejtéséhez lefelé görgetéskor */
-    .nav-hidden {
+     .nav-hidden {
         transform: translateY(-100%);
     }
 
@@ -152,7 +139,6 @@
         color: var(--sh-yellow) !important;
     }
 
-    /* Kör alakú témaváltó gomb */
     .btn-theme-toggle {
         background: var(--bg-card);
         border: 1px solid var(--border-color);

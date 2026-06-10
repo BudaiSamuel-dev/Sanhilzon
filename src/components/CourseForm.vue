@@ -1,14 +1,12 @@
 <script setup>
     import { ref } from 'vue'
 
-    // 1. A szülőtől megkapjuk a kurzusok listáját, hogy dinamikusan jeleníthessük meg a választót
     defineProps({
     courses: Array
     })
 
     const emit = defineEmits(['submit-enrollment'])
 
-    // 2. Az adatmodell pontosan követi a db.json "enrollments" mezőit
     const formData = ref({
         courseId: '',
         studentName: '',
@@ -17,7 +15,6 @@
     })
 
     const handleSubmit = () => {
-        // Kliensoldali validálás
         if (!formData.value.courseId || !formData.value.studentName || !formData.value.email || !formData.value.phone) {
             Swal.fire({
             icon: 'error',
@@ -30,7 +27,6 @@
             return
         }
 
-        // Ha minden ki van töltve, az adatokat egy objektumba csomagolva felküldjük a szülőnek
         emit('submit-enrollment', { ...formData.value })
     }
 
